@@ -28,14 +28,10 @@ import com.example.proyectorestauntante.dominio.Personal;
 import org.json.JSONArray;
 import org.json.JSONException;
 
-
 import java.util.HashMap;
 import java.util.Map;
-//aca perro
 import dmax.dialog.SpotsDialog;
 
-//LUIS
-//pull
 public class IniciarSesion extends AppCompatActivity {
     EditText edtCorreo,edtContrasenia;
     Button btnIniciarSesion, btnRegistrarse;
