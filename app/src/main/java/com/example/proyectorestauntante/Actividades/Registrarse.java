@@ -58,6 +58,7 @@ public class Registrarse extends AppCompatActivity {
     ImageView ivImagen;
     int PICK_IMAGE_REQUEST=1;
     Bitmap bitmap;
+    // aca
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
