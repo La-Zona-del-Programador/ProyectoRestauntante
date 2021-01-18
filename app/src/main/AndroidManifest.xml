@@ -2,9 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.proyectorestauntante">
 
-    <uses-permission android:name="android.permission.INTERNET" android:maxSdkVersion="19" />
-    <uses-permission android:maxSdkVersion="19" android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:maxSdkVersion="19" android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -14,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoRestauntante"
         android:usesCleartextTraffic="true">
+
         <activity android:name=".Actividades.Registrarse" />
 
         <activity android:name=".Actividades.IniciarSesion">

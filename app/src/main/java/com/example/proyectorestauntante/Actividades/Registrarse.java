@@ -26,6 +26,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -108,10 +109,11 @@ public class Registrarse extends AppCompatActivity {
                             dialog.dismiss();
                         }else{
                             try {
-                                String url="http://192.168.42.59:8080/RESTAURANTE/controles/controlMantenimientoPersonal.php";
+                                String url="http://192.168.1.43:8080/RESTAURANTE/controles/controlMantenimientoPersonal.php";
                                 StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
+                                        System.out.println("qweq"+response);
                                         try {
                                             JSONObject jsonObject = new JSONObject(response);
                                             String estado,mensaje;
@@ -131,8 +133,9 @@ public class Registrarse extends AppCompatActivity {
                                 }, new Response.ErrorListener() {
                                     @Override
                                     public void onErrorResponse(VolleyError error) {
-                                        System.out.println(error.getMessage()+" 145");
-                                        Log.i("Error2", error.getMessage());
+                                        System.out.println(error.getMessage()+"qweqwasd");
+                                        dialog.dismiss();
+                                        Toast.makeText(getBaseContext(), "Verificar si tiene Acceso a Internet.", Toast.LENGTH_LONG).show();
                                     }
                                 }){
                                     @Override
