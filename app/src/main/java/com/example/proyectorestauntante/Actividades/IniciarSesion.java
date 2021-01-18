@@ -33,7 +33,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dmax.dialog.SpotsDialog;
-//luis weqwe
 public class IniciarSesion extends AppCompatActivity {
     EditText edtCorreo,edtContrasenia;
     Button btnIniciarSesion, btnRegistrarse;
