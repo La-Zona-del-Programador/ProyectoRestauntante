@@ -34,7 +34,7 @@ import java.util.Map;
 
 import dmax.dialog.SpotsDialog;
 
-//LUIS
+//JHONATAN GIL DE MRD
 public class IniciarSesion extends AppCompatActivity {
     EditText edtCorreo,edtContrasenia;
     Button btnIniciarSesion, btnRegistrarse;
