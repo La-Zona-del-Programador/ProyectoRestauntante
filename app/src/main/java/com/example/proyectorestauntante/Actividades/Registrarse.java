@@ -137,6 +137,7 @@ public class Registrarse extends AppCompatActivity {
                                 }){
                                     @Override
                                     protected Map<String, String> getParams() throws AuthFailureError {
+                                        String foto=getStringImagen(bitmap);
                                         Map<String,String> parametros =new HashMap<String,String>();
                                         parametros.put("nombres",edtNombres.getText().toString());
                                         parametros.put("apellidos",edtApellidos.getText().toString());
@@ -144,6 +145,7 @@ public class Registrarse extends AppCompatActivity {
                                         parametros.put("correo",edtCorreo.getText().toString());
                                         parametros.put("contrasenia",edtContrasenia.getText().toString());
                                         parametros.put("cargo","ADMINISTRADOR");
+                                        parametros.put("foto",foto);
                                         return parametros;
                                     }
                                 };
@@ -160,6 +162,7 @@ public class Registrarse extends AppCompatActivity {
             }
 
         });
+
         ivImagen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
