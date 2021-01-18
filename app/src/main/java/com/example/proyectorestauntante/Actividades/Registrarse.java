@@ -133,7 +133,7 @@ public class Registrarse extends AppCompatActivity {
                                 }, new Response.ErrorListener() {
                                     @Override
                                     public void onErrorResponse(VolleyError error) {
-                                        System.out.println(error.getMessage()+"qweqwasd");
+                                        Log.i("Error2", error.getMessage());
                                         dialog.dismiss();
                                         Toast.makeText(getBaseContext(), "Verificar si tiene Acceso a Internet.", Toast.LENGTH_LONG).show();
                                     }
