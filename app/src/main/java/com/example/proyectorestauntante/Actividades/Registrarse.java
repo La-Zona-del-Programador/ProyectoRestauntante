@@ -49,7 +49,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dmax.dialog.SpotsDialog;
-
+//puctasumare
 public class Registrarse extends AppCompatActivity {
    EditText edtNombres, edtApellidos, edtDni, edtCorreo, edtContrasenia;
     Button btnRegistrar;
@@ -62,6 +62,7 @@ public class Registrarse extends AppCompatActivity {
     // acax2
     // acax3
     // acax4
+    //8555555555555555555
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
