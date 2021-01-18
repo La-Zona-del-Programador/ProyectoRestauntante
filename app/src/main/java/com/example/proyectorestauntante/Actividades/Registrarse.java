@@ -49,7 +49,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 import dmax.dialog.SpotsDialog;
-//puctasumare
 public class Registrarse extends AppCompatActivity {
    EditText edtNombres, edtApellidos, edtDni, edtCorreo, edtContrasenia;
     Button btnRegistrar;
@@ -58,26 +57,7 @@ public class Registrarse extends AppCompatActivity {
     ImageView ivImagen;
     int PICK_IMAGE_REQUEST=1;
     Bitmap bitmap;
-    // aca
-    // acax2
-    // acax3
-    // acax4
-    //85oeeeeeeeeeeeeeeeeeeeeee
-    //cavero kbro
-    /*+
-    asd
-    s
-    s
-    ss
-s
-ds
 
-
-s
-s
-s
-s
-     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
