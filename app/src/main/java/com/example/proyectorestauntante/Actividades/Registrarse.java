@@ -193,6 +193,8 @@ public class Registrarse extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }else{
+            System.out.println("no hay nada de foto");
         }
     }
 
