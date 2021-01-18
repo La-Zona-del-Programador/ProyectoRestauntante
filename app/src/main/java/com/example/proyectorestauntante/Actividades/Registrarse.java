@@ -64,6 +64,20 @@ public class Registrarse extends AppCompatActivity {
     // acax4
     //85oeeeeeeeeeeeeeeeeeeeeee
     //cavero kbro
+    /*+
+    asd
+    s
+    s
+    ss
+s
+ds
+
+
+s
+s
+s
+s
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
