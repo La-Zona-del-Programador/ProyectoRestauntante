@@ -2,21 +2,17 @@ package com.example.proyectorestauntante.Actividades;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.FileProvider;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
-import android.media.ExifInterface;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Base64;
@@ -36,15 +32,12 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.proyectorestauntante.R;
+import com.google.android.material.canvas.CanvasCompat;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -133,13 +126,15 @@ public class Registrarse extends AppCompatActivity {
                                 }, new Response.ErrorListener() {
                                     @Override
                                     public void onErrorResponse(VolleyError error) {
-                                        Log.i("Error2", error.getMessage());
+                                        System.out.println(error.getMessage());
                                         dialog.dismiss();
                                         Toast.makeText(getBaseContext(), "Verificar si tiene Acceso a Internet.", Toast.LENGTH_LONG).show();
                                     }
                                 }){
                                     @Override
                                     protected Map<String, String> getParams() throws AuthFailureError {
+                                        ivImagen.buildDrawingCache();
+                                        bitmap = ivImagen.getDrawingCache();
                                         String foto=getStringImagen(bitmap);
                                         Map<String,String> parametros =new HashMap<String,String>();
                                         parametros.put("nombres",edtNombres.getText().toString());
@@ -150,6 +145,7 @@ public class Registrarse extends AppCompatActivity {
                                         parametros.put("cargo","ADMINISTRADOR");
                                         parametros.put("foto",foto);
                                         return parametros;
+
                                     }
                                 };
                                 RequestQueue request= Volley.newRequestQueue(getBaseContext());
@@ -191,6 +187,7 @@ public class Registrarse extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==PICK_IMAGE_REQUEST && resultCode==RESULT_OK && data!=null && data.getData()!=null){
             Uri fileUri=data.getData();
+            System.out.println(fileUri+"qweqe");
             try {
                 //COMO OBTENER EL MAPA DE BITS DE LA GALERIA
                 bitmap=MediaStore.Images.Media.getBitmap(getContentResolver(),fileUri);
@@ -199,8 +196,6 @@ public class Registrarse extends AppCompatActivity {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else{
-            System.out.println("no hay nada de foto");
         }
     }
 

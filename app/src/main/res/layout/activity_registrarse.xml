@@ -91,7 +91,7 @@
         android:layout_width="212dp"
         android:layout_height="163dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/foto_perfil"
+        android:background="@drawable/fotoperfil"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

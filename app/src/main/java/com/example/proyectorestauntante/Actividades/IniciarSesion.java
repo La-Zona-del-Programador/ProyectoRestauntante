@@ -107,7 +107,7 @@ public class IniciarSesion extends AppCompatActivity {
                             }, new Response.ErrorListener() {
                                 @Override
                                 public void onErrorResponse(VolleyError error) {
-                                    Log.i("Error2", error.getMessage());
+                                    System.out.println(error.getMessage());
                                     dialog.dismiss();
                                     Toast.makeText(getBaseContext(), "Verificar si tiene Acceso a Internet.", Toast.LENGTH_LONG).show();
                                 }
